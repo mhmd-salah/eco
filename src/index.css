@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+  border-bottom: 3px solid black;
+  color: black;
+}
+*{
+  box-sizing: border-box;
+}
