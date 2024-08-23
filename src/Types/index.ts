@@ -1,4 +1,11 @@
-export interface Iproducts {
+export interface IDataResponse {
+  products: IData[];
+  total: number;
+  skip: number;
+  limit: number;
+}
+
+export interface IData {
   id: number;
   title: string;
   description: string;

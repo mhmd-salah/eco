@@ -1,14 +1,14 @@
-import { Iproducts } from "../Types";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "../Api";
+import { IData } from "../Types";
 
 const fetchProducts = async() =>{
-  const response =await api.get<{products:Iproducts[]}>("products")
+  const response =await api.get<{products:IData[]}>("products")
   return response.data.products
 }
 
 export const useProducts = ()=>{
-  return useQuery<Iproducts[]>({
+  return useQuery<IData[]>({
     queryKey:["products"],
     queryFn:fetchProducts,
   })
@@ -31,7 +31,7 @@ const fetchPosts = async():Promise<Iposts[]> =>{
   return response.data.posts
 }
 
-export const usePosts = ()=>{
+export const  usePosts = ()=>{
   return useQuery<Iposts[]>({
     queryKey:[`posts`],
     queryFn:fetchPosts
