@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { productsReducer } from "./features/products/CreateAsyncThunkEx";
+import { productsApiSlice } from "./features/products/ProductsSlice";
 
 export const store = configureStore({
   reducer: {
-    products: productsReducer,
+    Products: productsApiSlice,
   },
 });
 
